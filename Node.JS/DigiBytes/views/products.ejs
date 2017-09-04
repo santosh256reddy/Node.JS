@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+    </head>
+    <body>
+     <% include header %>
+        <table class="table table-hover">
+            <thead>
+                <th>S.No</th>
+                <th>Model</th>
+                <th>Description</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                 <% products.forEach((p)=>{ %>
+                    <tr>
+                    <td><%= p.id %></td>
+                <td><%= p.name %></td>
+                <td><%= p.description %></td>
+                <td><%= p.price%></td>
+                </tr>
+               <% })  %> 
+                
+            </tbody>
+        </table>
+        <h1>Hello</h1>
+         <% include footer %>
+    </body>
+</html>
